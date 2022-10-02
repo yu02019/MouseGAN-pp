@@ -38,6 +38,7 @@ tensorboard --logdir=run1:MouseGAN++,run2:MouseGAN --host localhost  --port=6060
 # open in the browser: http://localhost:6060/#scalars&_smoothingWeight=0.985
 ```
 
+![figure_loss_curve](../fig/loss_curve.png)
 
 ## Pretrained weight
 todo
