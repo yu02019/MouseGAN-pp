@@ -135,16 +135,8 @@ The details can be found in this [folder](/dataset_release).
 If you find our work / datasets useful for your research, please consider citing:
 
 ```bibtex
-@article{yu2022ben,
-  title={BEN: a generalizable Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans},
-  author={Yu, Ziqi and Han, Xiaoyang and Xu, Wenjing and Zhang, Jie and Marr, Carsten and Shen, Dinggang and Peng, Tingying and Zhang, Xiao-Yong and Feng, Jianfeng},
-  journal={bioRxiv},
-  year={2022},
-  publisher={Cold Spring Harbor Laboratory}
-}
+under review
 ```
-
-[//]: # (dataset reference: todo)
 
 
 [//]: # (Acknowledgements: TODO)
