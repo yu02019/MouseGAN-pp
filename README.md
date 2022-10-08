@@ -1,5 +1,5 @@
 <div>
-<img src="fig/logo.png" align="left" style="margin: 10 10 10 10;" height="130px">
+<img src="fig/logo.png" align="left" style="margin: 10 10 10 10;" height="100px">
 	<h1> MouseGAN++ </h1>
 <blockquote> Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain
 </blockquote>
