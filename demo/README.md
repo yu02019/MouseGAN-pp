@@ -1,6 +1,9 @@
 # Replicate Demo and Results
 
+---
+
 ## Contents
+
 
 Visit our [documentation](todo) for installation, tutorials and more.
 
@@ -9,8 +12,11 @@ Visit our [documentation](todo) for installation, tutorials and more.
 * [Pretrained weight](#pretrained-weight)
 * [More examples](#more-examples)
 * [Rater study](#rater-study)
+* [Dataset release](#dataset-release)
+* [Contributing to MouseGAN++](#Contributing-to-MouseGAN++)
 * [Limitation](#Limitation)
 
+---
 
 ## MRM NeAt segmentation
 We use 5-fold, 100 epochs, augmentation including resize, shift, scale and rotate for all methods. Details can be found in our paper.
@@ -64,7 +70,7 @@ Segmentation module:
 
 ## More examples
 
-Some fail cases:
+Some failed cases:
 
 | Methods    | Input image                    | Real image                    | Synthetic image                        | Modality   |
 |------------|--------------------------------|-------------------------------|----------------------------------------|------------|
@@ -93,8 +99,22 @@ We have invited three experts to score the synthetic images from 12 test mice wi
 |------------------------|--------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
 | Score<br/>(mean ± std) | 9.13 ± 0.72        | 7.56 ± 0.84 | 7.25 ± 0.84 | 4.58 ± 1.23 | 4.67 ± 1.15 | 4.36 ± 1.13 | 4.47 ± 1.50 | 4.67 ± 1.45 |
 
+## Dataset release
+At the current stage, our dataset is provisionally available at https://pan.baidu.com/s/1CqukZN0ShIbRDtNWCHFr-w, and please send emails to Dr. Xiao-Yong Zhang at xiaoyong_zhang@fudan.edu.cn for the password.
+(Datasets are still being collated and packaged, and will be released formally via Zenodo.org with the publication of the paper.)
 
+
+## Contributing to MouseGAN++
+
+We are happy about any contributions! (MRI data / trained weight / plug-in function code)
+
+MouseGAN++ follows the open-access paradigm, allowing users to save their updated models and share their weights for use by the neuroimaging community.
+
+Besides, the accumulation of additional imaging data will further improve the performance of MouseGAN++ and support the exploration of complex neuroimaging research.
 
 
 ## Limitation
 One limitation of our work is the dilemma caused by domain shifts, since the image quality and contrast from various centers may differ greatly. An appealing and promising solution is to convert our pretext task to cross-center image translation so that the learned center-agnostic features in the content space would alleviate the segmentation performance degradation.
+
+
+
