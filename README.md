@@ -9,14 +9,16 @@
 <hr />
 
 
-### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](#dataset_release) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN]()
+### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](#dataset_release) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
 
 ```
-BEN: A generalized Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans
+"BEN: a generalizable Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans." bioRxiv (2022).
+
 ```
+
 ---
 
 ![](fig/MouseGAN-pp-workflow.png)
