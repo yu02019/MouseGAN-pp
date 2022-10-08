@@ -9,7 +9,7 @@
 <hr />
 
 
-### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo) | [MRI data release](#dataset_release) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN]()
+### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](#dataset_release) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN]()
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
@@ -29,6 +29,7 @@ BEN: A generalized Brain Extraction Net for multimodal MRI data from rodents, no
 
 ### Pipeline Demo
 
+[//]: # (todo ! on Colab?)
 
 | Name       | Description         | Colab link |
 |------------|---------------------|------------|
@@ -146,5 +147,5 @@ If you find our work / datasets useful for your research, please consider citing
 
 [//]: # (Acknowledgements: TODO)
 
-Disclaimer: This toolkit is only for research purpose. If used on an additional dataset, the model might need to be fine-tuned before running.
+Disclaimer: This toolkit is only for research purpose. If used on an additional dataset, the model might need to be fine-tuned before running (refer to [Limitation](/demo/README.md/#Limitation)).
 

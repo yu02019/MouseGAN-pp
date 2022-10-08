@@ -7,9 +7,9 @@ Visit our [documentation](todo) for installation, tutorials and more.
 * [MRM NeAt segmentation](#MRM-NeAt-segmentation)
 * [Ablation study loss curve](#ablation-study-loss-curve)
 * [Pretrained weight](#pretrained-weight)
-
 * [More examples](#more-examples)
 * [Rater study](#rater-study)
+* [Limitation](#Limitation)
 
 
 ## MRM NeAt segmentation
@@ -40,14 +40,61 @@ tensorboard --logdir=run1:MouseGAN++,run2:MouseGAN --host localhost  --port=6060
 
 ![figure_loss_curve](../fig/loss_curve.png)
 
+
 ## Pretrained weight
-todo
+
+
+| Method     | Dataset                | Weight file                                                          |
+|------------|------------------------|----------------------------------------------------------------------|
+| MouseGAN++ | Multi-Modality Dataset | [Link](https://pan.baidu.com/s/14ivPaMRZ2Wx_jjs_TSnsRQ) (Code: ummb) |
+| MouseGAN   | Multi-Modality Dataset | [Link](https://pan.baidu.com/s/14ivPaMRZ2Wx_jjs_TSnsRQ) (Code: ummb) |
+| StarGAN-v2 | Multi-Modality Dataset | [Link](https://pan.baidu.com/s/14ivPaMRZ2Wx_jjs_TSnsRQ) (Code: ummb) |
+
+
+Segmentation module:
+
+
+| Method     | Dataset                                 | Weight file                                                          |
+|------------|-----------------------------------------|----------------------------------------------------------------------|
+| MouseGAN++ | Multi-Modality Dataset (finetune on T1) | [Link](https://pan.baidu.com/s/14ivPaMRZ2Wx_jjs_TSnsRQ) (Code: ummb) |
+| MouseGAN++ | Multi-Modality Dataset (finetune on T2) | [Link](https://pan.baidu.com/s/14ivPaMRZ2Wx_jjs_TSnsRQ) (Code: ummb) |
+| MouseGAN++ | MRM NeAt Dataset                        | [Link](https://pan.baidu.com/s/175BXR675dQSyhFX14bk5zg) (Code: l4oh) |
+
 
 
 ## More examples
-todo
+
+Some fail cases:
+
+| Methods    | Input image                    | Real image                    | Synthetic image                        | Modality   |
+|------------|--------------------------------|-------------------------------|----------------------------------------|------------|
+| MouseGAN++ | ![](example/input-T1-025+.png) | ![](example/real-T2-025+.png) | ![](example/output-T2-025+.png)        | T1w -> T2w |
+| MouseGAN++ | ![](example/input-T1-034+.png) | ![](example/real-T2-034+.png) | ![](example/output-T2-034+.png)        | T1w -> T2w |
+| StarGAN-v2 | ![](example/input-T1-028.png)  | ![](example/real-T2-028.png)  | ![](example/output-T2-028-StarGAN.png) | T1w -> T2w |
+| StarGAN-v2 | ![](example/input-T1-034.png)  | ![](example/real-T2-034.png)  | ![](example/output-T2-034-StarGAN.png) | T1w -> T2w |
+
+More cases:
+
+| Methods    | Synthetic image                        | Modality       |
+|------------|----------------------------------------|----------------|
+| MouseGAN++ | ![](example/outputE_76.png)            | T2*w -> Others |
+| MouseGAN++ | ![](example/outputD_80.png)            | T2w -> Others  |
+| MouseGAN++ | ![](example/outputC_66.png)            | T1w -> Others  |
+| StarGAN-v2 | ![](example/050000_latent_psi_1.0.jpg) | -              |
 
 
 
 ## Rater study 
-todo
+
+We have invited three experts to score the synthetic images from 12 test mice with regard to the delineation of related anatomy on a 10-point scale as follows: excellent diagnostic quality (8-10), good diagnostic quality (6-8), fair diagnostic quality (4-6), poor diagnostic quality (2-4), and non-diagnostic (0-2). Please refer to the following table.
+
+
+|                        | Real image (label) | MouseGAN++  | MouseGAN    | CycleGAN    | SynSeg      | UNIT        | MUNIT       | StarGAN-v2  |
+|------------------------|--------------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|
+| Score<br/>(mean ± std) | 9.13 ± 0.72        | 7.56 ± 0.84 | 7.25 ± 0.84 | 4.58 ± 1.23 | 4.67 ± 1.15 | 4.36 ± 1.13 | 4.47 ± 1.50 | 4.67 ± 1.45 |
+
+
+
+
+## Limitation
+One limitation of our work is the dilemma caused by domain shifts, since the image quality and contrast from various centers may differ greatly. An appealing and promising solution is to convert our pretext task to cross-center image translation so that the learned center-agnostic features in the content space would alleviate the segmentation performance degradation.
