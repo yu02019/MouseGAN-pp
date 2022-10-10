@@ -9,7 +9,7 @@
 <hr />
 
 
-### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](#dataset_release) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
+### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
@@ -33,9 +33,9 @@ See also:
 
 [//]: # (todo ! on Colab?)
 
-| Name       | Description         | Colab link |
-|------------|---------------------|------------|
-| MouseGAN++ | MouseGAN++ pipeline | Todo       |
+| Name       | Description         | Colab link         |
+|------------|---------------------|--------------------|
+| MouseGAN++ | MouseGAN++ pipeline | [link](#plan-list) |
 
 
 ### Replicate Demo and Results
@@ -62,6 +62,7 @@ Visit our [documentation](todo) for installation, tutorials and more.
     + [Run translation alone](#run-translation)
     + [Run segmentation alone](#run-segmentation)  
     + [Choice of pretext task](#choice-of-pretext-task)
+    + [Plan list](#plan-list)
 * [Resources](#resources)
   * [Dataset release](/dataset_release)
   * [Pretained weight](/dataset_release)
@@ -105,14 +106,19 @@ For example, run on MRM NeAt dataset:
 
 [//]: # (todo)
 ```shell
-python segmentation.py todo
+python segmentation.py -i input_folder -o output_folder -w model_weight 
 ```
-
-
 
 ## Choice of pretext task
 
 In our paper, we used modality translation as our pretext task, as we wanted to impute missing modality. However, if readers are faced with multi-center single modality data (e.g, T2w MR images from 11.7T and 9.4T scanners), our pretext task could change to center-style translation easily.
+
+## Plan list
+
+1. Update interfaces
+2. Update Documentation
+3. Update Tutorials
+4. Update Colab demo
 
 
 
@@ -135,7 +141,7 @@ The details can be found in this [folder](/dataset_release).
 If you find our work / datasets useful for your research, please consider citing:
 
 ```bibtex
-under review
+"MouseGAN++: Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain." Under review (2022)
 ```
 
 
