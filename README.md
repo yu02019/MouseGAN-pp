@@ -130,7 +130,7 @@ In our paper, we used modality translation as our pretext task, as we wanted to 
 
 We will release our multi-modality MR mouse dataset images for more extensive communities for both neuroscience and deep learning.
 
-The details can be found in this [folder](/dataset_release).
+The details can be found in this [folder](/demo).
 
 
 
