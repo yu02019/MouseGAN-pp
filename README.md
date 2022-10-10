@@ -33,9 +33,9 @@ See also:
 
 [//]: # (todo ! on Colab?)
 
-| Name       | Description         | Colab link         |
-|------------|---------------------|--------------------|
-| MouseGAN++ | MouseGAN++ pipeline | [link](#plan-list) |
+| Name       | Description         | Colab link                              |
+|------------|---------------------|-----------------------------------------|
+| MouseGAN++ | MouseGAN++ pipeline | [link](#plan-list) (refer to plan list) |
 
 
 ### Replicate Demo and Results
@@ -115,10 +115,11 @@ In our paper, we used modality translation as our pretext task, as we wanted to 
 
 ## Plan list
 
-1. Update interfaces
-2. Update Documentation
-3. Update Tutorials
-4. Update Colab demo
+
+- [ ] Update interfaces (Before October 12th)
+- [ ] Update Documentation (Before October 18th)
+- [ ] Update Colab demo (Before October 13th)
+- [ ] Update Tutorials (Before October 16th)
 
 
 
