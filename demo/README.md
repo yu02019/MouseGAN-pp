@@ -14,7 +14,11 @@ Visit our [documentation](todo) for installation, tutorials and more.
 * [Rater study](#rater-study)
 * [Dataset release](#dataset-release)
 * [Contributing to MouseGAN++](#Contributing-to-MouseGAN++)
+* [Hyper-parameter](#hyper-parameter)
 * [Limitation](#Limitation)
+
+[//]: # (* [Acknowledgement]&#40;#Acknowledgement&#41;)
+[//]: # (todo: Acknowledgement)
 
 ---
 
@@ -111,6 +115,12 @@ We are happy about any contributions! (MRI data / trained weight / plug-in funct
 MouseGAN++ follows the open-access paradigm, allowing users to save their updated models and share their weights for use by the neuroimaging community.
 
 Besides, the accumulation of additional imaging data will further improve the performance of MouseGAN++ and support the exploration of complex neuroimaging research.
+
+
+## Hyper-parameter
+To update.
+
+[//]: # (todo: how to tune these hyper-parameters)
 
 
 ## Limitation
