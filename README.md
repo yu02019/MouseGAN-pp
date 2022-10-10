@@ -1,5 +1,5 @@
 <div>
-<img src="fig/logo.png" align="left" style="margin: 10 10 10 10;" height="80px">
+<img src="fig/logo.png" align="left" style="margin: 10 10 10 10;" height="100px">
 	<h1> MouseGAN++ </h1>
 <blockquote> Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain
 </blockquote>
@@ -9,13 +9,17 @@
 <hr />
 
 
-### [Paper](todo) | [Pipeline](todo)  | [Replicate demo](#replicate-demo) | [MRI data release](#dataset_release) | [Pretrained weight](/dataset_release) | [Interface](todo)  | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN]()
+### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
-See also: 
+See also:
+<img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
+
 ```
-BEN: A generalized Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans
+"BEN: a generalizable Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans." bioRxiv (2022).
+
 ```
-[Github project link](https://github.com/yu02019/BEN)
+
+---
 
 ![](fig/MouseGAN-pp-workflow.png)
 
@@ -25,31 +29,27 @@ BEN: A generalized Brain Extraction Net for multimodal MRI data from rodents, no
 
 [//]: # (🚀 Quick start to use BEN or replicate our experiments in 5 minutes!)
 
-### Replicate Demo and Results
+### Pipeline Demo
 
+[//]: # (todo ! on Colab?)
 
-| Name       | Description         | Colab link |
-|------------|---------------------|------------|
-| MouseGAN++ | MouseGAN++ pipeline | Todo       |
+| Name       | Description         | Colab link                              |
+|------------|---------------------|-----------------------------------------|
+| MouseGAN++ | MouseGAN++ pipeline | [link](#plan-list) (refer to plan list) |
 
 
 ### Replicate Demo and Results
  
 
-| Name                      | Description                                                          | Snapshot                                                                                                  | Colab link                                                                                                                                                                                                                                                                                                                                                                       |
-|---------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MRM NeAt segmentation     | Segmentation results & pretrained weights.                           |
-| Ablation study loss curve | Loss curve for ablation study from Tensorboard.                      | <img src="./fig/cross-species-post.png" width = "150" height = "74" alt="Snapshot on Win" align=center /> | Cross species [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qsBg-_6NxVFUJCk0tbTyQ7vY8_FLnrc9?usp=sharing)                                                                                                                                                                                                |
-| Pretrained weight         | Pretrained weight for MouseGAN++.                                    | <img src="./fig/cross-field.png" width = "150" height = "74" alt="Snapshot on Win" align=center />        | Cross modalities [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14NWqdbkpsdt0cS4-SLCvcDmHLU05UlmV?usp=sharing) <br/> Cross MR scanners [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xrREREKEs0HvDvhxA0sGCLsIdAFNLd2w?usp=sharing) |
-| More examples             | More results of MouseGAN++ and sota methods, including failure case. | <img src="./fig/Fig4.png" width = "150" height = "74" alt="Snapshot on Win" align=center />               | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HgHgqli-mVuIj9QolJ85KEB8LJcgN5qh?usp=sharing)                                                                                                                                                                                                              |
+| Name                      | Description                                                           | Details        |
+|---------------------------|-----------------------------------------------------------------------|----------------|
+| MRM NeAt segmentation     | Segmentation results & pretrained weights.                            | [link](./demo) |
+| Ablation study loss curve | Loss curve for ablation study from Tensorboard.                       | [link](./demo) |
+| Pretrained weight         | Pretrained weight for MouseGAN++.                                     | [link](./demo) |
+| More examples             | More results of MouseGAN++ and SOTA methods, including failure cases. | [link](./demo) |
+| Rater study               | Qualitatively results of synthesized images by medical experts.       | [link](./demo) |
 
  
-
-
-### MRI data release | pretrained weight
-
-The details can be found in this [folder](/dataset_release).
-
 
 
 ---
@@ -59,10 +59,10 @@ Visit our [documentation](todo) for installation, tutorials and more.
 
 * [Installation](#installation)
 * [Quick Start / Tutorial](#quick-start)
-    + [Run pipeline](#run-pipeline)
-    + [Run translation alone](#run-translation-alone)
-    + [Run segmentation alone](#run-segmentation-alone)  
+    + [Run translation alone](#run-translation)
+    + [Run segmentation alone](#run-segmentation)  
     + [Choice of pretext task](#choice-of-pretext-task)
+    + [Plan list](#plan-list)
 * [Resources](#resources)
   * [Dataset release](/dataset_release)
   * [Pretained weight](/dataset_release)
@@ -75,7 +75,7 @@ Visit our [documentation](todo) for installation, tutorials and more.
 
 Requirements:
 
-* torch == 1.15.4
+* torch == 1.3
 * numpy == 1.16
 * SimpleITK == 2.0
 * opencv-python == 4.1
@@ -85,67 +85,52 @@ Requirements:
 
 Install dependencies:
 
-
 ```shell
 git clone https://github.com/yu02019/MouseGAN-pp.git
 cd MouseGAN-pp
 pip install -r requirement.txt
 ```
 
-The target domain data folder looks like this: (Download data from this repository/Colab or put your data here.)
 
-<img src="./fig/folder_tree.png" width = "320" height = "230" alt="folder_tree" align=center/>
 
-## Quick Start
+## Run translation
+For multi-modality dataset:
 
-### Cross modalities
+```shell
+python translation.py --dataroot DATAROOT --name NAME --num_domains NUM_DOMAINS --out_dir OUT_DIR --resume MODEL_DIR --num NUM_PER_IMG
+```
 
-#### Results:
 
-1. Modality: T2WI -> EPI
-2. For this exemplar domain adaptation (DA) task, No label is used (zero-shot).
-3. From top raw to the third raw: Raw image, Baseline result, BEN's result.
+## Run segmentation
+For example, run on MRM NeAt dataset:
 
-   ![Alt text](fig/cross-modality.png "fig.1")
-
-### Cross MR scanner with different field strengths
-
-1. MR scanner with different field strengths: 11.7 T -> 7 T
-2. For this exemplar domain adaptation (DA) task, No label is used (zero-shot).
-3. From top raw to the third raw: Raw image, Baseline result, BEN's result.
-
-   ![](fig/cross-field.png)
-
-### Cross species
-
-1. Species: Mouse -> Rat
-2. For this exemplar domain adaptation (DA) task, only ONE label is used.
-3. The segmentation results are shown in red, the ground truth are shown in orange.
-4. From top raw to the fifth raw: Raw image, Zero-shot (0 label used), finetune (1 label used), BEN's result (1 label
-   used), Ground truth.
-
-   ![](fig/cross-species.png)
-
-5. (Optional) Just do some simple postprocessing here, e.g., only save the top-K largest connected regions.
-6. Compared with other methods, it further shows BEN's advantages
-
-   ![](fig/cross-species-post.png)
+[//]: # (todo)
+```shell
+python segmentation.py -i input_folder -o output_folder -w model_weight 
+```
 
 ## Choice of pretext task
 
 In our paper, we used modality translation as our pretext task, as we wanted to impute missing modality. However, if readers are faced with multi-center single modality data (e.g, T2w MR images from 11.7T and 9.4T scanners), our pretext task could change to center-style translation easily.
+
+## Plan list
+
+
+- [ ] Update interfaces (Before October 12th)
+- [ ] Update Documentation (Before October 18th)
+- [ ] Update Colab demo (Before October 13th)
+- [ ] Update Tutorials (Before October 16th)
 
 
 
 # Resources
 
 
-## Data release / Pretrained weight / Contributing to BEN
+## Dataset release / Pretrained weight / Contributing to MouseGAN++
 
-[//]: # (The details can be found in this [folder]&#40;/dataset_release&#41;.)
+We will release our multi-modality MR mouse dataset images for more extensive communities for both neuroscience and deep learning.
 
-We will release Multi-Modality Dataset
-
+The details can be found in this [folder](/dataset_release).
 
 
 
@@ -157,19 +142,11 @@ We will release Multi-Modality Dataset
 If you find our work / datasets useful for your research, please consider citing:
 
 ```bibtex
-@article{yu2022ben,
-  title={BEN: a generalizable Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans},
-  author={Yu, Ziqi and Han, Xiaoyang and Xu, Wenjing and Zhang, Jie and Marr, Carsten and Shen, Dinggang and Peng, Tingying and Zhang, Xiao-Yong and Feng, Jianfeng},
-  journal={bioRxiv},
-  year={2022},
-  publisher={Cold Spring Harbor Laboratory}
-}
+"MouseGAN++: Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain." Under review (2022)
 ```
-
-[//]: # (dataset reference: todo)
 
 
 [//]: # (Acknowledgements: TODO)
 
-Disclaimer: This toolkit is only for research purpose. If used on an additional dataset, the model might need to be fine-tuned before running.
+Disclaimer: This toolkit is only for research purpose. If used on an additional dataset, the model might need to be fine-tuned before running (refer to [Limitation](/demo/README.md/#Limitation)).
 
