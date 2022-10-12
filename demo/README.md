@@ -27,7 +27,7 @@ We use 5-fold, 100 epochs, augmentation including resize, shift, scale and rotat
 
 The raw data file and other metrics (e.g., ASD) can be found in [Excel table](./results-ep100.xlsx).
 
-| Fold (Dice)                      | Hipp            | SC              | stri (checked)  | Tha             | Weight file                                                          |
+| Fold (Dice)                      | Hipp            | SC              | Striatum        | Tha             | Weight file                                                          |
 |----------------------------------|-----------------|-----------------|-----------------|-----------------|----------------------------------------------------------------------|
 | Fold 1                           | 0.9033 ± 0.0143 | 0.8765 ± 0.0215 | 0.9179 ± 0.0108 | 0.9276 ± 0.0087 | [Link](https://pan.baidu.com/s/175BXR675dQSyhFX14bk5zg) (Code: l4oh) |
 | Fold 2                           | 0.9078 ± 0.0139 | 0.8646 ± 0.0190 | 0.9142 ± 0.0143 | 0.9259 ± 0.0055 | [Link](https://pan.baidu.com/s/175BXR675dQSyhFX14bk5zg) (Code: l4oh) |
