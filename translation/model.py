@@ -45,7 +45,6 @@ class MD_multi(nn.Module):
 
         self.cls_loss = nn.BCEWithLogitsLoss()
 
-        # 2022/10/13
         self.criterion = ContrastiveLoss(temperature=0.10, contrast_mode='all', contrastive_method='cl')
 
 
@@ -386,7 +385,7 @@ class MD_multi(nn.Module):
         return
 
     def resume(self, model_dir, train=True):
-        # checkpoint = torch.load(model_dir)  # 原本的模型是用gpu20 两个GPU训练的，而你的电脑只有一个，所以会出错。
+        # checkpoint = torch.load(model_dir)  # train on two GPUs, and test on one.
         checkpoint = torch.load(model_dir, map_location='cuda:0')
         # weight
         if train:
@@ -419,13 +418,12 @@ class ContrastiveLoss(nn.Module):
     """Supervised Contrastive Learning: https://arxiv.org/pdf/2004.11362.pdf.
     It also supports the unsupervised contrastive loss in SimCLR"""
     def __init__(self, temperature=0.10, contrast_mode='all',
-                 base_temperature=0.10, contrastive_method='simclr'):  # 0.1是slice位置的距离，替换为Our data后不再用
+                 base_temperature=0.10, contrastive_method='simclr'):
         super(ContrastiveLoss, self).__init__()
         self.temperature = temperature
         self.contrast_mode = contrast_mode
         self.base_temperature = base_temperature
         self._cosine_similarity = torch.nn.CosineSimilarity(dim=-1)
-        # self.threshold = threshold
         self.contrastive_method = contrastive_method
 
     def _cosine_simililarity(self, x, y):
