@@ -9,7 +9,7 @@
 <hr />
 
 
-### [Paper](#citation) | [Pipeline](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
+### [Paper](#citation) | [Usage demo](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
@@ -29,13 +29,16 @@ See also:
 
 [//]: # (🚀 Quick start to use BEN or replicate our experiments in 5 minutes!)
 
-### Pipeline Demo
+### Usage Demo
 
 [//]: # (todo ! on Colab?)
 
-| Name       | Description         | Colab link                              |
-|------------|---------------------|-----------------------------------------|
-| MouseGAN++ | MouseGAN++ pipeline | [link](#plan-list) (refer to plan list) |
+| Name       | Modality                 | Colab link                                                                                                                                                          |
+|------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MouseGAN++ | T1w, T2w, T2*w, QSM, Mag | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IqWeyO7eLb0phOkUnBEuD4bD5napD-k-?usp=sharing) |
+| MouseGAN++ |         T1w, T2w         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hCkeV_stkbZlS1e2QG1gMFVrpexjFgfZ?usp=sharing) |
+
+
 
 
 ### Replicate Demo and Results
@@ -116,10 +119,11 @@ In our paper, we used modality translation as our pretext task, as we wanted to 
 ## Plan list
 
 
-- [ ] Update interfaces (Before October 12th)
+- [x] ~~Update interfaces (Before October 12th)~~
 - [ ] Update Documentation (Before October 18th)
-- [ ] Update Colab demo (Before October 13th)
-- [ ] Update Tutorials (Before October 16th)
+- [x] ~~Update Colab demo (Before October 13th)~~
+- [x] ~~Update Tutorials (Before October 16th) (see details in demo)~~
+- [ ] Rewrite dataloader 
 
 
 
