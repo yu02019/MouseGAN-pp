@@ -16,7 +16,6 @@ See also:
 
 ```
 "BEN: a generalizable Brain Extraction Net for multimodal MRI data from rodents, nonhuman primates, and humans." bioRxiv (2022).
-
 ```
 
 ---
@@ -25,19 +24,13 @@ See also:
 
 
 
-[//]: # (## Overview)
-
-[//]: # (🚀 Quick start to use BEN or replicate our experiments in 5 minutes!)
 
 ### Usage Demo
-
-[//]: # (todo ! on Colab?)
 
 | Name       | Modality                 | Colab link                                                                                                                                                          |
 |------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MouseGAN++ | T1w, T2w, T2*w, QSM, Mag | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1IqWeyO7eLb0phOkUnBEuD4bD5napD-k-?usp=sharing) |
 | MouseGAN++ |         T1w, T2w         | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hCkeV_stkbZlS1e2QG1gMFVrpexjFgfZ?usp=sharing) |
-
 
 
 
@@ -79,19 +72,21 @@ Visit our [documentation](todo) for installation, tutorials and more.
 Requirements:
 
 * torch == 1.3
-* numpy == 1.16
+* numpy == 1.19
 * SimpleITK == 2.0
-* opencv-python == 4.1
+* opencv-python == 4.2
 
 [//]: # (* scikit-image == 0.16.2)
 
 
 Install dependencies:
 
+[//]: # (conda env export > environment.yml  &#40;Export the active environment to a new file&#41;)
+
 ```shell
 git clone https://github.com/yu02019/MouseGAN-pp.git
 cd MouseGAN-pp
-pip install -r requirement.txt
+conda env create -f environment.yml
 ```
 
 
@@ -124,6 +119,7 @@ In our paper, we used modality translation as our pretext task, as we wanted to 
 - [x] ~~Update Colab demo (Before October 13th)~~
 - [x] ~~Update Tutorials (Before October 16th) (see details in demo)~~
 - [ ] Rewrite dataloader 
+- [ ] Consolidate [`BEN`](https://github.com/yu02019/BEN) and [`MouesGAN++`](https://github.com/yu02019/MouseGAN-pp) as one fully end-to-end pipeline for the mouse brain.
 
 
 

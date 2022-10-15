@@ -118,9 +118,17 @@ Besides, the accumulation of additional imaging data will further improve the pe
 
 
 ## Hyper-parameter
-To update.
+How to tune these hyper-parameters:
+The hyper-parameters matter and are task-dependent. They are not carefully selected yet. However, the selection of hyper-parameters reported in our paper works well on mouse brain datasets. 
 
-[//]: # (todo: how to tune these hyper-parameters)
+In addition, we conducted an ablation study on contrastive loss hyper-parameters. We discovered that λ=1 works well on our task and maintains balance between other losses during the training procedure.
+
+The quantitative results will be provided as follows:
+
+(To update figure here for lambda = 0(Baseline)/0.1/1.0(Selected)/5.0)
+
+
+[//]: # (todo: add table/figure here!)
 
 
 ## Limitation

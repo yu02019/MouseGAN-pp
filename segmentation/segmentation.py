@@ -1,7 +1,7 @@
 import torch
 from .model import Segmentor  # final_my_unet
 from utils import load_checkpoint
-from my_dataset import get_loaders
+from dataset import get_loaders
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 

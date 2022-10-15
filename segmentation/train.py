@@ -12,7 +12,7 @@ from utils import (
     check_accuracy,
     save_predictions_as_imgs,
 )
-from my_dataset import get_loaders
+from dataset import get_loaders
 
 # Hyperparameters etc.
 LEARNING_RATE = 1e-4
