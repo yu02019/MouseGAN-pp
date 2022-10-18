@@ -9,7 +9,7 @@
 <hr />
 
 
-### [Paper](#citation) | [Usage demo](#Usage-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo#dataset-release) | [Pretrained weight](/demo#pretrained-weight) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
+### [Paper](#citation) | [Usage demo](#Usage-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo#dataset-release) | [Pretrained weight](/demo#pretrained-weight) | [Documentation](https://mousegan-pp.readthedocs.io)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
