@@ -9,7 +9,7 @@
 <hr />
 
 
-### [Paper](#citation) | [Usage demo](#pipeline-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo) | [Pretrained weight](/demo) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
+### [Paper](#citation) | [Usage demo](#Usage-demo)  | [Replicate demo](#replicate-demo-and-results) | [MRI data release](/demo#dataset-release) | [Pretrained weight](/demo#pretrained-weight) | [Documentation](todo)  | [Contents](#Quick-Start-Contents) | [See also: BEN](https://github.com/yu02019/BEN)
 
 See also:
 <img src="https://github.com/yu02019/BEN/blob/main/fig/logo.png" width = "100" height = "72" alt="BEN logo" align=center /> | [Github project link](https://github.com/yu02019/BEN)
@@ -115,7 +115,7 @@ In our paper, we used modality translation as our pretext task, as we wanted to 
 
 
 - [x] ~~Update interfaces (Before October 12th)~~
-- [ ] Update Documentation (Before October 18th)
+- [x] ~~Update Documentation (Before October 18th)~~
 - [x] ~~Update Colab demo (Before October 13th)~~
 - [x] ~~Update Tutorials (Before October 16th) (see details in demo)~~
 - [ ] Rewrite dataloader 

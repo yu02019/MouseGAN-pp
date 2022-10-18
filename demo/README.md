@@ -53,6 +53,7 @@ tensorboard --logdir=run1:MouseGAN++,run2:MouseGAN --host localhost  --port=6060
 
 ## Pretrained weight
 
+Translation module:
 
 | Method     | Dataset                | Weight file                                                          |
 |------------|------------------------|----------------------------------------------------------------------|
@@ -74,17 +75,6 @@ Segmentation module:
 
 ## More examples
 
-Some failed cases:
-
-| Methods    | Input image                    | Real image                    | Synthetic image                        | Modality   |
-|------------|--------------------------------|-------------------------------|----------------------------------------|------------|
-| MouseGAN++ | ![](example/input-T1-025+.png) | ![](example/real-T2-025+.png) | ![](example/output-T2-025+.png)        | T1w -> T2w |
-| MouseGAN++ | ![](example/input-T1-034+.png) | ![](example/real-T2-034+.png) | ![](example/output-T2-034+.png)        | T1w -> T2w |
-| StarGAN-v2 | ![](example/input-T1-028.png)  | ![](example/real-T2-028.png)  | ![](example/output-T2-028-StarGAN.png) | T1w -> T2w |
-| StarGAN-v2 | ![](example/input-T1-034.png)  | ![](example/real-T2-034.png)  | ![](example/output-T2-034-StarGAN.png) | T1w -> T2w |
-
-More cases:
-
 | Methods    | Synthetic image                        | Modality       |
 |------------|----------------------------------------|----------------|
 | MouseGAN++ | ![](example/outputE_76.png)            | T2*w -> Others |
@@ -92,6 +82,14 @@ More cases:
 | MouseGAN++ | ![](example/outputC_66.png)            | T1w -> Others  |
 | StarGAN-v2 | ![](example/050000_latent_psi_1.0.jpg) | -              |
 
+Some <font color=red>failed</font> cases:
+
+| Methods    | Input image                    | Real image                    | <font color=red>Failed</font> Synthetic image | Modality   |
+|------------|--------------------------------|-------------------------------|-----------------------------------------------|------------|
+| MouseGAN++ | ![](example/input-T1-025+.png) | ![](example/real-T2-025+.png) | ![](example/output-T2-025+.png)               | T1w -> T2w |
+| MouseGAN++ | ![](example/input-T1-034+.png) | ![](example/real-T2-034+.png) | ![](example/output-T2-034+.png)               | T1w -> T2w |
+| StarGAN-v2 | ![](example/input-T1-028.png)  | ![](example/real-T2-028.png)  | ![](example/output-T2-028-StarGAN.png)        | T1w -> T2w |
+| StarGAN-v2 | ![](example/input-T1-034.png)  | ![](example/real-T2-034.png)  | ![](example/output-T2-034-StarGAN.png)        | T1w -> T2w |
 
 
 ## Rater study 
@@ -119,13 +117,18 @@ Besides, the accumulation of additional imaging data will further improve the pe
 
 ## Hyper-parameter
 How to tune these hyper-parameters:
-The hyper-parameters matter and are task-dependent. They are not carefully selected yet. However, the selection of hyper-parameters reported in our paper works well on mouse brain datasets. 
+The hyper-parameters matter and are task-dependent. They are not carefully selected yet. Despite this, the selection of hyper-parameters reported in our paper works well on mouse brain datasets. 
 
 In addition, we conducted an ablation study on contrastive loss hyper-parameters. We discovered that λ=1 works well on our task and maintains balance between other losses during the training procedure.
 
-The quantitative results will be provided as follows:
+The quantitative results are provided as follows:
 
-(To update figure here for lambda = 0(Baseline)/0.1/1.0(Selected)/5.0)
+|         | T1 -> T2                       | T2 -> T1                       |
+|---------|--------------------------------|--------------------------------|
+| Results | ![](example/ablation_t1t2.png) | ![](example/ablation_t2t1.png) |
+
+where λ=0 is the baseline method (previous MouseGAN).
+
 
 
 [//]: # (todo: add table/figure here!)
