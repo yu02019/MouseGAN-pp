@@ -15,6 +15,7 @@ Visit our [documentation](todo) for installation, tutorials and more.
 * [Dataset release](#dataset-release)
 * [Contributing to MouseGAN++](#Contributing-to-MouseGAN++)
 * [Hyper-parameter](#hyper-parameter)
+* [t-SNE](#t-sne)
 * [Limitation](#Limitation)
 
 [//]: # (* [Acknowledgement]&#40;#Acknowledgement&#41;)
@@ -129,6 +130,10 @@ The quantitative results are provided as follows:
 
 where λ=0 is the baseline method (previous MouseGAN).
 
+## t-SNE
+Visualization of latent attribute/style embedding space for D2-Net via the scatter plot of attribute feature clusters using t-SNE.
+
+![](example/t-sne-for-D2-Net.jpg)
 
 
 [//]: # (todo: add table/figure here!)
