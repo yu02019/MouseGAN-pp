@@ -103,8 +103,10 @@ We have invited three experts to score the synthetic images from 12 test mice wi
 | Score<br/>(mean ± std) | 9.13 ± 0.72        | 7.56 ± 0.84 | 7.25 ± 0.84 | 4.58 ± 1.23 | 4.67 ± 1.15 | 4.36 ± 1.13 | 4.47 ± 1.50 | 4.67 ± 1.45 |
 
 ## Dataset release
-At the current stage, our dataset is provisionally available at https://pan.baidu.com/s/1CqukZN0ShIbRDtNWCHFr-w, and please send emails to Dr. Xiao-Yong Zhang at xiaoyong_zhang@fudan.edu.cn for the password.
-(Datasets are still being collated and packaged, and will be released formally via Zenodo.org with the publication of the paper.)
+Please send emails to Dr. Xiao-Yong Zhang for the download links. 
+
+[//]: # (At the current stage, our dataset is provisionally available at https://pan.baidu.com/s/1CqukZN0ShIbRDtNWCHFr-w, and please send emails to Dr. Xiao-Yong Zhang at xiaoyong_zhang@fudan.edu.cn for the password.)
+[//]: # (&#40;Datasets are still being collated and packaged, and will be released formally via Zenodo.org with the publication of the paper.&#41;)
 
 
 ## Contributing to MouseGAN++
