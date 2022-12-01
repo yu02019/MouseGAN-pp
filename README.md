@@ -142,7 +142,15 @@ The details can be found in this [folder](/demo).
 If you find our work / datasets useful for your research, please consider citing:
 
 ```bibtex
-"MouseGAN++: Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain." Under review (2022)
+@ARTICLE{9966838,
+  author={Yu, Ziqi and Han, Xiaoyang and Zhang, Shengjie and Feng, Jianfeng and Peng, Tingying and Zhang, Xiao-Yong},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={MouseGAN++: Unsupervised Disentanglement and Contrastive Representation for Multiple MRI Modalities Synthesis and Structural Segmentation of Mouse Brain}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TMI.2022.3225528}}
 ```
 
 
