@@ -6,8 +6,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms.functional as TF
 
-import segmentation.networks as networks
-
+import networks
 
 class DoubleConv(nn.Module):
     def __init__(self, in_channels, out_channels):

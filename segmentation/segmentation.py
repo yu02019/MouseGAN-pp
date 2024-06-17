@@ -1,5 +1,5 @@
 import torch
-from .model import Segmentor  # final_my_unet
+from model import Segmentor  # final_my_unet
 from utils import load_checkpoint
 from dataset import get_loaders
 import albumentations as A
@@ -118,17 +118,15 @@ if __name__ == '__main__':
 
 
     ''' save to nii '''
-
-    import os
-    from utils.read_all_data_from_nii_pipe import save_pred_to_nii
-
-    reshape_volumes = seg_volumes
-
-    save_folder_path = r'xxx/{}/'.format(csv_name)
-    if not os.path.exists(save_folder_path):
-        os.mkdir(save_folder_path)
-
-    save_pred_to_nii(reshape_volumes, need_rotate=False,
-                     save_path=save_folder_path,
-                     ref_path=r'xxx/*')
-
+    # import os
+    # from utils.read_all_data_from_nii_pipe import save_pred_to_nii
+    #
+    # reshape_volumes = seg_volumes
+    #
+    # save_folder_path = r'xxx/{}/'.format(csv_name)
+    # if not os.path.exists(save_folder_path):
+    #     os.mkdir(save_folder_path)
+    #
+    # save_pred_to_nii(reshape_volumes, need_rotate=False,
+    #                  save_path=save_folder_path,
+    #                  ref_path=r'xxx/*')
