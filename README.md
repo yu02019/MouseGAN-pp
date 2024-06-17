@@ -102,8 +102,16 @@ python translation.py --dataroot DATAROOT --name NAME --num_domains NUM_DOMAINS 
 ## Run segmentation
 For example, run on MRM NeAt dataset:
 
+**Note:** The previous version of the code required modifying parameters directly within the .py file and processed .npy format files.
+We are currently updating the code to accept command line arguments and to handle nii/nii.gz format files. This update is still in progress.
+Please stay tuned for updates or modify the source code directly.
+
+In the meantime, you can refer to our upcoming project for improved functionalities (Github repo: Todo)
+
 [//]: # (todo)
 ```shell
+# This functionality is currently under development.
+# Please stay tuned for updates or modify the source code directly.
 python segmentation.py -i input_folder -o output_folder -w model_weight 
 ```
 
